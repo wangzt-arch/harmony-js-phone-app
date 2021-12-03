@@ -1,0 +1,11 @@
+{
+  "data": {
+  },
+  "actions": {
+    "routerEvent": {
+      "action": "router",
+      "bundleName": "com.example.visualpage",
+      "abilityName": "com.example.visualpage.MainAbility"
+    }
+  }
+}

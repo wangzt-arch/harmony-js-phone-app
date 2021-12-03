@@ -1,0 +1,12 @@
+<div class="container">
+    <image class="container-banner" src="../../common/images/parking-banner.png"></image>
+    <div class="container-input-plate-number">
+        <div class="input-plate-number-top">
+            <input class="input-province" value="京" onchange="onInputProvince" maxlength="1"></input>
+            <input class="input-number" onchange="onInputNumber" placeholder="请输入车牌号"maxlength="7"></input>
+        </div>
+        <button class="search-parking" onclick="onAddCars">
+            立即绑定
+        </button>
+    </div>
+</div>

@@ -1,0 +1,119 @@
+{
+  "app": {
+    "bundleName": "com.example.visualpage",
+    "vendor": "wzt",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {
+    "default": {
+      "network": {
+        "cleartextTraffic": true
+      }
+    }
+  },
+  "module": {
+    "package": "com.example.visualpage",
+    "name": ".MyApplication",
+    "mainAbility": "com.example.visualpage.MainAbility",
+    "deviceType": [
+      "phone",
+      "tablet"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "name": "com.example.visualpage.MainAbility",
+        "icon": "$media:emotion",
+        "description": "$string:mainability_description",
+        "formsEnabled": true,
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "forms": [
+          {
+            "jsComponentName": "widget",
+            "isDefault": true,
+            "scheduledUpdateTime": "10:30",
+            "defaultDimension": "2*2",
+            "name": "widget",
+            "description": "This is a service widget",
+            "colorMode": "auto",
+            "type": "JS",
+            "supportDimensions": [
+              "2*2"
+            ],
+            "updateEnabled": true,
+            "updateDuration": 1
+          },
+          {
+            "jsComponentName": "widget",
+            "isDefault": false,
+            "scheduledUpdateTime": "10:30",
+            "defaultDimension": "2*2",
+            "name": "card",
+            "description": "This is a service widget",
+            "colorMode": "auto",
+            "type": "JS",
+            "supportDimensions": [
+              "2*2"
+            ],
+            "updateEnabled": true,
+            "updateDuration": 1
+          }
+        ],
+        "launchType": "standard"
+      }
+    ],
+    "js": [
+      {
+        "pages": [
+          "pages/index/index"
+        ],
+        "name": "widget",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": false
+        },
+        "type": "form"
+      },
+      {
+        "pages": [
+          "pages/login/index",
+          "pages/parking/parking",
+          "pages/mycars/mycars",
+          "pages/addcars/addcars",
+          "pages/member_center/member_center",
+          "pages/home/home"
+        ],
+        "name": "default",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": false
+        }
+      }
+    ],
+    "reqPermissions": [
+      {
+        "reason": "",
+        "name": "ohos.permission.INTERNET"
+      }
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+<div class="container">
+    <image class="container-banner" src="../../common/images/parking-banner.png"></image>
+    <div class="container-input-plate-number">
+        <div class="input-plate-number-top">
+            <input class="input-province" value="京" onchange="onInputProvince" maxlength="1"></input>
+            <input class="input-number" onchange="onInputNumber" placeholder="请输入车牌号"maxlength="7"></input>
+        </div>
+        <button class="search-parking" onclick="onSearch">
+            查询缴费
+        </button>
+    </div>
+    <div class="container-content">
+        <div class="content-record">
+            <div class="record-title">
+                <text>缴费记录</text>
+                <text>查看缴费记录</text>
+            </div>
+            <image class="content-image" src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/payment-record.png">
+            </image>
+        </div>
+
+        <div class="content-my-cars" onclick="onNavigateToMyCars">
+            <div class="record-title">
+                <text>我的车辆</text>
+                <text>管理车辆信息</text>
+            </div>
+            <image class="content-image" src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/my-cars.png"></image>
+        </div>
+    </div>
+    <div class="bind-cars">
+        <div class="bind-cars-title">
+            <text>
+                您已绑定的车辆
+            </text>
+        </div>
+        <div class="bind-cars-area">
+            <div class="bind-cars-area-item" for="{{ plateNumberBinds }}">
+                <div class="bind-cars-item-tag"></div>
+                <text>{{ $item.car_number }}</text>
+                <image class="item-close" onclick="deletePlateNumberById({{$item.id}})" src='https://puzhehei.oss-cn-beijing.aliyuncs.com/global/close.png'></image>
+            </div>
+            <div class="bind-cars-area-item">
+                <div class="bind-cars-item-tag"></div>
+                <text>京ASDFGW</text>
+                <image class="item-close" src='https://puzhehei.oss-cn-beijing.aliyuncs.com/global/close.png'></image>
+            </div>
+        </div>
+    </div>
+    <div class="parking-explains">
+        <text class="parking-explains-title" onclick="getExplains">
+            <span>停车说明</span>
+        </text>
+        <text>
+            <span>{{ carparkExplain }}</span>
+        </text>
+    </div>
+</div>

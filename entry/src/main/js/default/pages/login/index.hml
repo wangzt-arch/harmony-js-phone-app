@@ -1,0 +1,15 @@
+<div class="container">
+    <text class="title">
+        手机号登录/注册
+    </text>
+    <input type="number" class="mobile" placeholder="输入手机号" maxlength="11" onchange="inputMobile"></input>
+    <div class="sms">
+        <input maxlength="6" type="number" placeholder="短信验证码" onchange="inputSms"></input>
+        <button class="get-sms" onclick="getSmsData">
+            获取验证码
+        </button>
+    </div>
+    <button class="login" onclick="login">
+        登录/注册
+    </button>
+</div>

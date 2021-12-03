@@ -1,0 +1,58 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.huawei.ohos.app'
+
+//For instructions on signature configuration, see https://developer.harmonyos.com/cn/docs/documentation/doc-guides/ide_debug_device-0000001053822404#ZH-CN_TOPIC_0000001154985555__section1112183053510
+ohos {
+    signingConfigs {
+        release {
+            storeFile file('/Users/apple/visual.p12')
+            storePassword '0000001FFFCB6FBDB0E8D07FE3A042AD6A0A2FF690EB000F78D54A7527E986C0F51809BA4474CF30CAC772177A03F9'
+            keyAlias = 'visual'
+            keyPassword '0000001F3983193ED417391BBB3A1CF84DBD048736FDBAF4BA63000C6D834CBA8CFED167C5A51830D57F14C98BD5C2'
+            signAlg = 'SHA256withECDSA'
+            profile file('/Users/apple/comallRelease.p7b')
+            certpath file('/Users/apple/comall.cer')
+        }
+        debug {
+            storeFile file('/Users/apple/.ohos/config/auto_debug_visualpage_2850086000531261387.p12')
+            storePassword '00000018E2F876321995BC58F86C0091A3006DF3FC82078A0BA0FFF917009AEA213656808229E494'
+            keyAlias = 'debugKey'
+            keyPassword '000000183C53F7DF9A5B56E06B4AEE3F0674F4DC0B0F382D64003D7EA0D5E82096F718A5B8EB035E'
+            signAlg = 'SHA256withECDSA'
+            profile file('/Users/apple/.ohos/config/auto_debug_visualpage_2850086000531261387.p7b')
+            certpath file('/Users/apple/.ohos/config/auto_debug_visualpage_2850086000531261387.cer')
+        }
+    }
+    compileSdkVersion 6
+    defaultConfig {
+        compatibleSdkVersion 6
+    }
+}
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.huawei.ohos:hap:3.0.3.4'
+        classpath 'com.huawei.ohos:decctest:1.2.6.0'
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+        jcenter()
+    }
+}

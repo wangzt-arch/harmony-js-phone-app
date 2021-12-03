@@ -1,0 +1,138 @@
+.container {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    padding: 31px;
+    background-color: #F6F6F6;
+}
+
+.user-avatar {
+    width: 123px;
+    height: 123px;
+    margin-right: 23px;
+}
+
+.message-right {
+    flex-direction: column;
+}
+
+.user-nickname {
+    height: 54px;
+    font-size: 42px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.user-rank {
+    width: 80px;
+    height: 31px;
+}
+
+.user-card {
+    flex-direction: column;
+    width: 659px;
+    height: 108px;
+    margin-top: 67px;
+    padding: 15px 61px;
+    background: linear-gradient(307deg, #34322A 0%, #121212 100%);
+/*    box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.4);*/
+    border-radius: 0px 0px 20px 20px;
+}
+
+.user-card-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    font-size: 27px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #F6F6F6;
+    line-height: 38px;
+}
+
+.user-card-slider {
+    height: 2px;
+    color: #F6F6F6;
+    selected-color: #C9A36F;
+    block-color: transparent;
+}
+
+.user-integral {
+    width: 659px;
+    height: 154px;
+    justify-content: space-between;
+    margin-top: 31px;
+}
+
+.user-integral-box {
+    width: 384px;
+    height: 154px;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 31px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+}
+
+.user-coupon-box {
+    width: 252px;
+    height: 154px;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 31px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+}
+
+.server {
+    flex-direction: column;
+    width: 659px;
+    margin-top: 31px;
+    padding-bottom: 23px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+}
+
+.server-title {
+    width: 659px;
+    height: 96px;
+    align-items: center;
+    padding: 0 31px;
+    font-size: 31px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #000000;
+}
+
+.server-content {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.server-content-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 161px;
+    height: 138px;
+    background-color: #ffffff;
+}
+.server-content-item-icon{
+    width: 43px;
+    height: 43px;
+}
+.server-content-item-title{
+    width: 100%;
+    height: 31px;
+    align-items: center;
+    text-align: center;
+    font-size: 23px;
+    margin-top: 17px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #000000;
+}

@@ -1,0 +1,20 @@
+<!-- index.hml -->
+<element name="parking" src="../parking/parking.hml"></element>
+<element name="member_center" src="../member_center/member_center.hml"></element>
+<div class="container">
+    <tabs class="tabs">
+
+        <tab-content class="tabContent">
+            <div class="tabContent">
+                <parking></parking>
+            </div>
+            <div class="tabContent" >
+                <member_center></member_center>
+            </div>
+        </tab-content>
+        <tab-bar class="tabBar">
+            <text class="tabBarItem">停车缴费</text>
+            <text class="tabBarItem">会员中心</text>
+        </tab-bar>
+    </tabs>
+</div>

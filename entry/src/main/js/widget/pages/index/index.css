@@ -1,0 +1,11 @@
+.container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #007046;
+}
+
+.container-title {
+    font-size: 150px;
+    color: white;
+}

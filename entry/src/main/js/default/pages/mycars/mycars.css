@@ -1,0 +1,50 @@
+.container {
+    position: relative;
+    height: 100%;
+    padding: 23px 31px;
+    background-color: #F6F6F6
+}
+.my-cars{
+    display: flex;
+/*    max-height: 85%;*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.my-cars__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    width: 659px;
+    height: 138px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 0px 31px;
+    margin-bottom: 23px;
+}
+.item-icon{
+    width: 46px;
+    height: 46px;
+    border-radius: 23px;
+    background-color: #007046;
+}
+.item-plate-number{
+    height: 42px;
+    font-size: 31px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #000000;
+    margin-left: 31px;
+}
+.item-close{
+    width: 42px;
+    height: 42px;
+}
+.add-cars{
+    position: absolute;
+    bottom: 0px;
+    width: 659px;
+    height: 77px;
+    background-color: rgb(0, 112, 70);
+    border-radius: 52px;
+}

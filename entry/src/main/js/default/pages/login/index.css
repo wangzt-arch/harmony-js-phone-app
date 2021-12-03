@@ -1,0 +1,43 @@
+.container {
+    flex-direction: column;
+    padding: 0 60px 0 60px;
+}
+
+input {
+    background-color: transparent;
+    font-size: 32px;
+}
+
+.title {
+    width: 420px;
+    height: 80px;
+    margin-top: 56px;
+    font-size: 56px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 80px;
+}
+
+.mobile {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.get-sms {
+    width: 302px;
+    height: 68px;
+    border-radius: 34px;
+    padding: 10px;
+    font-size: 28px;
+    font-weight: 400;
+    background-color: #007046;
+}
+
+.login {
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+    font-size: 32px;
+    background-color: #007046;
+    border-radius: 50px;
+}

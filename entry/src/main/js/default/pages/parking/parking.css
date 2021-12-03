@@ -1,0 +1,132 @@
+.container {
+    flex-direction: column;
+}
+
+.container-banner {
+    width: 750px;
+    height: 320px;
+}
+
+.container-input-plate-number {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 659px;
+    height: 284px;
+    margin-top: -70px;
+    margin-left: 31px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 15px 0px grey;
+    border-radius: 15px;
+    padding: 31px;
+}
+
+.input-plate-number-top {
+    width: 597px;
+    height: 96px;
+    border-radius: 15px;
+}
+
+.input-province {
+    width: 131px;
+    height: 96px;
+    opacity: 0.56;
+    border-radius: 0px;
+}
+
+.input-number {
+    width: 467px;
+    height: 96px;
+    opacity: 0.56;
+    border-radius: 0px;
+    letter-spacing: 30px;
+}
+
+.search-parking {
+    width: 597px;
+    height: 96px;
+    background-color: rgb(0, 112, 70);
+    border-radius: 15px;
+}
+
+.container-content {
+    justify-content: space-between;
+    width: 659px;
+    height: 134px;
+    margin-top: 69px;
+    margin-left: 31px;
+}
+
+.content-record {
+    width: 317px;
+    height: 134px;
+    font-size: 21px;
+    background-color: #EDF8F9;
+    border-radius: 15px;
+}
+
+.content-my-cars {
+    width: 317px;
+    height: 134px;
+    font-size: 21px;
+    background-color: #FCF7F4;
+    border-radius: 15px;
+
+}
+
+.record-title {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 31px 23px;
+}
+
+.content-image {
+    width: 134px;
+    height: 134px;
+}
+.parking-explains{
+    margin-top: 69px;
+    padding: 0px 31px;
+    flex-direction: column;
+}
+.parking-explains-title{
+    height: 42px;
+    font-size: 27px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 42px;
+    margin-bottom: 31px;
+}
+.bind-cars{
+    margin-top: 69px;
+    margin-bottom: -31px;
+    flex-direction: column;
+    padding: 0px 31px;
+}
+.bind-cars-title{
+    margin-bottom: 31px;
+}
+.bind-cars-area{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.bind-cars-area-item{
+    align-items: center;
+    padding: 13px;
+    justify-content: space-between;
+    width: 317px;
+    height: 69px;
+    background-color: #F6F6F6;
+    border-radius: 15px;
+    margin-bottom: 31px;
+}
+.bind-cars-item-tag{
+    width: 15px;
+    height: 15px;
+    border-radius: 7px;
+    background-color: rgba(0, 112, 70, 0.7);
+}
+.item-close{
+    width: 46px;
+    height: 46px;
+}

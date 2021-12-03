@@ -1,0 +1,49 @@
+.container {
+    flex-direction: column;
+}
+
+.container-banner {
+    width: 750px;
+    height: 320px;
+}
+
+.container-input-plate-number {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 659px;
+    height: 284px;
+    margin-top: -70px;
+    margin-left: 31px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 15px 0px grey;
+    border-radius: 15px;
+    padding: 31px;
+}
+
+.input-plate-number-top {
+    width: 597px;
+    height: 96px;
+    border-radius: 15px;
+}
+
+.input-province {
+    width: 131px;
+    height: 96px;
+    opacity: 0.56;
+    border-radius: 0px;
+}
+
+.input-number {
+    width: 467px;
+    height: 96px;
+    opacity: 0.56;
+    border-radius: 0px;
+    letter-spacing: 10px;
+}
+
+.search-parking {
+    width: 597px;
+    height: 96px;
+    background-color: rgb(0, 112, 70);
+    border-radius: 15px;
+}
