@@ -3,18 +3,127 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color:#F1F3F5;
+    background-color: #ffffff;
 }
-.tabs{
+
+.tabs {
 }
-.tabBar{
+
+.tabBar {
     width: 100%;
 }
-.tabContent{
+
+.tabContent {
     width: 100%;
     margin-top: 10px;
 }
-.home-header{
-    width: 720px;
 
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-header {
+    display: flex;
+    align-items: center;/*    justify-content: space-between;*/
+    width: 720px;
+    height: 84px;
+    padding: 0 31px;
+    background-color: #FFFFFF;
+}
+
+.home-header_icon {
+    width: 46px;
+    height: 46px;
+    margin-right: 15px;
+}
+
+.home-header_name {
+    width: 547px;
+    font-size: 23px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #000000;
+}
+
+.home-header_search {
+    width: 46px;
+    height: 46px;
+}
+
+.image-ad {
+    width: 720px;
+    height: 607px;
+    padding: 31px;
+    border-radius: 29px;
+    background-color: #FFFFFF;
+}
+
+.image-ad_swiper {
+    indicator-bottom: 40px;
+    indicator-right: 0px;
+    indicator-selected-color: #999999;
+}
+
+.image-ad_swiper_item {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-ad_swiper_item_img {
+    width: 657px;
+    height: 438px;
+    background-color: #D8D8D8;
+    border-radius: 29px;
+}
+
+.image-ad_first-title {
+    height: 46px;
+    margin-top: 27px;
+    font-size: 33px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #262626;
+    line-height: 46px;
+}
+
+.image-ad_second-title {
+    height: 38px;
+    margin-top: 8px;
+    font-size: 27px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #666666;
+    line-height: 38px;
+}
+
+.image-navigate {
+    display: flex;
+    flex-wrap: wrap;
+    width: 720px;
+    padding: 0px 23px;
+    background-color: #FFFFFF;
+}
+
+.image-navigate_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 25%;
+    height: 184px;
+}
+
+.image-navigate_item_image {
+    width: 77px;
+    height: 77px;
+}
+
+.image-navigate_item_title {
+    height: 35px;
+    font-size: 23px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 35px;
 }

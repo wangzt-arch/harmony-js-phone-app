@@ -8,7 +8,38 @@
             <div class="tabContent">
                 <div class="home">
                     <div class="home-header">
+                        <image class="home-header_icon"
+                               src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon-position.png"></image>
+                        <div class="home-header_name">
+                            <text>{{ subsiteName }}</text>
+                        </div>
+                        <image class="home-header_search"
+                               src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon_search%402x.png"></image>
+                    </div>
+                    <div class="image-ad">
+                        <swiper class="image-ad_swiper" id="swiper" index="0" indicator="true" loop="true"
+                                digital="false" cachedsize="-1"
+                                scrolleffect="spring">
+                            <div class="image-ad_swiper_item" for="{{ [, 1, 1, 1, 1, 2] }}">
+                                <image src="{{ imageAdBanner }}" class="image-ad_swiper_item_img">
+                                </image>
+                                <div class="image-ad_first-title">
+                                    <text>LAMER 海蓝之谜</text>
+                                </div>
+                                <div class="image-ad_second-title">
+                                    <text>挚爱追随 海蓝之谜奢宠之旅</text>
+                                </div>
+                            </div>
 
+                        </swiper>
+                    </div>
+                    <div class="image-navigate">
+                        <div class="image-navigate_item" for="{{ [1, 2, 2, 5, 3] }}">
+                            <image class="image-navigate_item_image"
+                                   src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon_service_parking.png">
+                            </image>
+                            <text class="image-navigate_item_title">停车缴费</text>
+                        </div>
                     </div>
                 </div>
             </div>
