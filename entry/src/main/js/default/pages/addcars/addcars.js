@@ -28,15 +28,15 @@ export default {
             }
         }
         try {
-            const res = await  hmsHttp(url, params, "GET")
+            const res = await  hmsHttp(url, params, "POST")
             const resString = JSON.parse(res.result)
             console.log(resString)
             console.log(JSON.stringify(res))
-            if (res.responseCode == 200) {
+//            if (res.responseCode == 201) {
                 router.push({
                     uri: 'pages/parking/parking'
                 })
-            }
+//            }
         }
         catch (err) {
             console.info(err)

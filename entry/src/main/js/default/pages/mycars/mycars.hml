@@ -7,13 +7,6 @@
             </div>
             <image class="item-close" onclick="deletePlateNumberById({{$item.id}})" src='https://puzhehei.oss-cn-beijing.aliyuncs.com/global/close.png'></image>
         </div>
-        <div class="my-cars__item">
-            <div>
-                <image class="item-icon" src="../../common/images/plate-icon.png"></image>
-                <text class="item-plate-number">京A34532</text>
-            </div>
-            <image class="item-close" src='https://puzhehei.oss-cn-beijing.aliyuncs.com/global/close.png'></image>
-        </div>
     </div>
     <button class="add-cars" onclick="onNavigateToAddCars">
         添加车辆

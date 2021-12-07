@@ -39,11 +39,6 @@
                 <text>{{ $item.car_number }}</text>
                 <image class="item-close" onclick="deletePlateNumberById({{$item.id}})" src='https://puzhehei.oss-cn-beijing.aliyuncs.com/global/close.png'></image>
             </div>
-            <div class="bind-cars-area-item">
-                <div class="bind-cars-item-tag"></div>
-                <text>京ASDFGW</text>
-                <image class="item-close" src='https://puzhehei.oss-cn-beijing.aliyuncs.com/global/close.png'></image>
-            </div>
         </div>
     </div>
     <div class="parking-explains">

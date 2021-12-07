@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="user-message">
+    <div class="user-message" onclick="onGetUserMessage">
         <image class="user-avatar" src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/default-photo%402x.png">
         </image>
         <div class="message-right">
