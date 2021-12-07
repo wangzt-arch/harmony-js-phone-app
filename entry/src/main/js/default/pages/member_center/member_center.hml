@@ -1,6 +1,6 @@
 <div class="container">
     <div class="user-message" onclick="onGetUserMessage">
-        <image class="user-avatar" src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/default-photo%402x.png">
+        <image class="user-avatar" src="{{ avatar }}">
         </image>
         <div class="message-right">
             <text class="user-nickname">{{ nickname }}</text>
@@ -9,15 +9,15 @@
     </div>
     <div class="user-card">
         <div class="user-card-title">
-            <text>钻石会员</text>
+            <text>{{ cardLevelName }}</text>
             <text>0/500</text>
         </div>
         <slider class="user-card-slider" max="500" value="200"></slider>
     </div>
     <div class="user-integral">
-        <div class="user-integral-box">
+        <div class="user-integral-box" onclick="onGetUserAssets">
             <text>
-                <span>10000000 分</span>
+                <span>{{ pointAmount }} 分</span>
             </text>
             <text>
                 <span>我的积分</span>
@@ -25,7 +25,7 @@
         </div>
         <div class="user-coupon-box">
             <text>
-                <span>8 张</span>
+                <span>{{ couponCount }} 张</span>
             </text>
             <text>
                 <span>优惠券</span>
@@ -37,7 +37,7 @@
             <text>服务</text>
         </div>
         <div class="server-content">
-            <div class="server-content-item" onclick="onNavigateTo" for="{{ [1, 2, 3, 4, 5, 6,3,5,5,5,5,5,5,5] }}">
+            <div class="server-content-item" onclick="onNavigateTo" for="{{ [1, 2, 3, 4] }}">
                 <image class="server-content-item-icon"
                        src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon_service_parking.png"></image>
                 <text class="server-content-item-title">

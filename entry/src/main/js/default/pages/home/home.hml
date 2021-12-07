@@ -6,14 +6,18 @@
 
         <tab-content class="tabContent">
             <div class="tabContent">
-                <parking></parking>
+                <div class="home">
+                    <div class="home-header">
+
+                    </div>
+                </div>
             </div>
-            <div class="tabContent" >
+            <div class="tabContent">
                 <member_center></member_center>
             </div>
         </tab-content>
         <tab-bar class="tabBar">
-            <text class="tabBarItem">停车缴费</text>
+            <text class="tabBarItem">首页</text>
             <text class="tabBarItem">会员中心</text>
         </tab-bar>
     </tabs>

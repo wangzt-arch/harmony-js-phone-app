@@ -26,8 +26,8 @@ export default {
                 },
                 header: {}
             }
-            const hmsData = await hmsHttp("https://miao-magic-dev-restapi.co-mall.com/api/sms/noCaptcha/201", params, 'POST')
-            console.info("验证码", hmsData)
+            const res = await hmsHttp("https://miao-magic-dev-restapi.co-mall.com/api/sms/noCaptcha/201", params, 'POST')
+            console.info("验证码", res)
         }
         catch (err) {
             console.info(err)
@@ -45,12 +45,10 @@ export default {
 //
 //                }
 //            }
-//            const hmsData = await hmsHttp(url, params, 'POST')
-//            const hmsString = JSON.stringify(hmsData)
-//            console.info(hmsString)
-//            console.info(JSON.stringify(hmsData.result))
-//
-//
+//            const res = await hmsHttp(url, params, 'POST')
+//            const hmsString = JSON.stringify(res)
+//            console.log(hmsString)
+//            console.log(JSON.stringify(res.result))
 //        }
 //        catch (err) {
 //            console.info(err)
