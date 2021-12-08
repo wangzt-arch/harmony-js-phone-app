@@ -100,7 +100,9 @@
           "pages/mycars/mycars",
           "pages/addcars/addcars",
           "pages/member_center/member_center",
-          "pages/home/home"
+          "pages/home/home",
+          "pages/subsite_list/subsite_list",
+          "pages/profile/profile"
         ],
         "name": "default",
         "window": {

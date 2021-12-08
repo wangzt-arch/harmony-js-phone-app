@@ -1,0 +1,80 @@
+.subsite-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 659px;
+    height: 309px;
+    padding: 23px;
+    background-color: #FFFFFF;
+}
+
+.subsite-card_name {
+    height: 38px;
+    font-size: 27px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #000000;
+    line-height: 38px;
+}
+
+.subsite-card_position {
+    height: 31px;
+    font-size: 21px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 31px;
+}
+
+.subsite-card_content {
+    display: flex;
+    margin-top: 21px;
+    width: 100%;
+    height: 167px;
+}
+
+.subsite-card_content_left {
+    width: 263px;
+    height: 167px;
+}
+
+.subsite-card_content_right {
+    display: flex;
+    padding-left: 13px;
+    flex-direction: column;
+}
+
+.content-right_title {
+    font-size: 21px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #999999;
+}
+
+.content-right_text {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #000000;
+}
+
+.subsite-card_navigate {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 23px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #127046;
+}
+
+.subsite-card_call {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 23px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #127046;
+}

@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 31px;
+    background-color: #F6F6F6;
+}
+.list-group_title {
+    display: flex;
+    align-items: center;
+    width: 720px;
+    height: 96px;
+    background-color: #f6f6f6;
+}
+.list-group_item{
+    display: flex;
+    flex-direction: column;
+}
+.item-group_subsite {
+    width: 659px;
+    height: 309px;
+    margin-bottom: 10px;
+/*    background-color: #ffffff;*/
+}
+.container-nearly{
+    height: 42px;
+    margin-bottom: 17px;
+    font-size: 31px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #000000;
+    line-height: 42px;
+}

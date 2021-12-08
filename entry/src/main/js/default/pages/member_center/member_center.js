@@ -42,6 +42,7 @@ export default {
         }
     },
     async onGetUserAssets() {
+        const url = 'https://miao-magic-dev-restapi.co-mall.com/MAGIC-MEMBER/front/members/mine/assets'
         try {
             const params = {
                 extraData: {},
@@ -51,7 +52,7 @@ export default {
                     subsiteId: '4'
                 }
             }
-            const res = await hmsHttp("https://miao-magic-dev-restapi.co-mall.com/MAGIC-MEMBER/front/members/mine/assets", params, 'GET')
+            const res = await hmsHttp(url, params, 'GET')
             console.log(JSON.stringify(res.result))
             console.log(res.responseCode)
             const result = JSON.parse(res.result)
@@ -62,5 +63,10 @@ export default {
         catch (err) {
             console.info(err)
         }
+    },
+    onNavigateToProfile() {
+        router.push({
+            uri: 'pages/profile/profile'
+        })
     }
 }

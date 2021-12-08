@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="user-message" onclick="onGetUserMessage">
+    <div class="user-message" onclick="onNavigateToProfile">
         <image class="user-avatar" src="{{ avatar }}">
         </image>
         <div class="message-right">

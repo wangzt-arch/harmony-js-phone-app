@@ -1,0 +1,5 @@
+<div class="container">
+    <text class="title" onclick="onPostBase64">
+        从手机选择图片
+    </text>
+</div>

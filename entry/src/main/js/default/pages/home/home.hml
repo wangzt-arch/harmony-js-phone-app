@@ -10,7 +10,7 @@
                     <div class="home-header">
                         <image class="home-header_icon"
                                src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon-position.png"></image>
-                        <div class="home-header_name">
+                        <div class="home-header_name" onclick="onNavigateToSubsiteList">
                             <text>{{ subsiteName }}</text>
                         </div>
                         <image class="home-header_search"

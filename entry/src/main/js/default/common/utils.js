@@ -41,7 +41,7 @@ export default function hmsHttp(url, params, method) {
             apiVersion: '1',
             'Accept-language': 'zh-CN',
             language: 'zh-CN',
-            'Content-Type': 'application/json;charset=utf-8',
+            'content-type': 'application/json;charset=utf-8',
             os: 'android',
             unique: getUnique(),
             ...params.header
