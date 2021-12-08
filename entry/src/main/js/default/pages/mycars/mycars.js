@@ -1,14 +1,15 @@
 import router from '@system.router';
-import hmsHttp from '../../common/utils.js';
+import hmsHttp, {baseUrl} from '../../common/utils.js';
+
 export default {
     data: {
-        plateNumberBinds:[]
+        plateNumberBinds: []
     },
-    onInit(){
-      this.getPlateNumbers()
+    onInit() {
+        this.getPlateNumbers()
     },
     getPlateNumbers() {
-        const url = 'https://miao-magic-dev-restapi.co-mall.com/CARPARK/front/car_numbers?id=72002'
+        const url = `${baseUrl}/CARPARK/front/car_numbers?id=72002`
         const params = {
             extraData: {
                 id: '72002'
@@ -29,11 +30,10 @@ export default {
             console.info("err", err)
         })
     },
-    async deletePlateNumberById(id){
-        const url = `https://miao-magic-dev-restapi.co-mall.com/CARPARK/front/car_numbers/delete_carnumber/${id}`
+    async deletePlateNumberById(id) {
+        const url = `${baseUrl}/CARPARK/front/car_numbers/delete_carnumber/${id}`
         const params = {
-            extraData: {
-            },
+            extraData: {},
             header: {
                 userId: '72002',
                 subsiteId: "4",
@@ -51,7 +51,7 @@ export default {
             console.info(err)
         }
     },
-    onNavigateToAddCars(){
+    onNavigateToAddCars() {
         router.push({
             uri: 'pages/addcars/addcars'
         })

@@ -1,5 +1,5 @@
 import router from '@system.router';
-import hmsHttp from '../../common/utils.js';
+import hmsHttp, {baseUrl} from '../../common/utils.js';
 
 export default {
     data: {
@@ -16,7 +16,7 @@ export default {
         this.plateNumber = this.province + e.value
     },
     async onAddCars() {
-        const url = 'https://miao-magic-dev-restapi.co-mall.com/CARPARK/front/car_numbers'
+        const url = `${baseUrl}/CARPARK/front/car_numbers`
         const params = {
             extraData: {
                 car_number: this.plateNumber
@@ -32,11 +32,11 @@ export default {
             const resString = JSON.parse(res.result)
             console.log(resString)
             console.log(JSON.stringify(res))
-//            if (res.responseCode == 201) {
-                router.push({
-                    uri: 'pages/parking/parking'
-                })
-//            }
+            //            if (res.responseCode == 201) {
+            router.push({
+                uri: 'pages/parking/parking'
+            })
+            //            }
         }
         catch (err) {
             console.info(err)

@@ -1,11 +1,11 @@
-import hmsHttp from '../../common/utils.js';
+import hmsHttp, {baseUrl} from '../../common/utils.js';
 
 export default {
     data: {
         title: 'World'
     },
     async onPostBase64() {
-        const url = 'https://miao-magic-dev-restapi.co-mall.com/api/pictures/base64'
+        const url = `${baseUrl}/api/pictures/base64`
         const params = {
             extraData: {
                 index: 0,

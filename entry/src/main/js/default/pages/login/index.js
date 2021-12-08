@@ -1,4 +1,4 @@
-import hmsHttp from '../../common/utils'
+import hmsHttp, {baseUrl} from '../../common/utils'
 import router from '@system.router';
 
 export default {
@@ -26,7 +26,7 @@ export default {
                 },
                 header: {}
             }
-            const res = await hmsHttp("https://miao-magic-dev-restapi.co-mall.com/api/sms/noCaptcha/201", params, 'POST')
+            const res = await hmsHttp(`${baseUrl}/api/sms/noCaptcha/201`, params, 'POST')
             console.info("验证码", res)
         }
         catch (err) {
@@ -34,25 +34,23 @@ export default {
         }
     },
     async login() {
-//        try {
-//            const url = 'https://miao-magic-dev-restapi.co-mall.com/api/members/members_login_by_mobile'
-//            const params = {
-//                extraData: {
-//                    phone_number: this.mobile,
-//                    sms_verify_code: this.verifySms
-//                },
-//                header: {
-//
-//                }
-//            }
-//            const res = await hmsHttp(url, params, 'POST')
-//            const hmsString = JSON.stringify(res)
-//            console.log(hmsString)
-//            console.log(JSON.stringify(res.result))
-//        }
-//        catch (err) {
-//            console.info(err)
-//        }
+        try {
+            const url = `${baseUrl}/api/members/members_login_by_mobile`
+            const params = {
+                extraData: {
+                    phone_number: this.mobile,
+                    sms_verify_code: this.verifySms
+                },
+                header: {}
+            }
+            const res = await hmsHttp(url, params, 'POST')
+            const hmsString = JSON.stringify(res)
+            console.log(hmsString)
+            console.log(JSON.stringify(res.result))
+        }
+        catch (err) {
+            console.info(err)
+        }
         router.push({
             uri: 'pages/home/home'
         })

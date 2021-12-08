@@ -1,5 +1,5 @@
 import router from '@system.router';
-import hmsHttp from '../../common/utils'
+import hmsHttp, {baseUrl} from '../../common/utils'
 
 export default {
     data: {
@@ -22,7 +22,7 @@ export default {
         this.plateNumber = this.province + e.value
     },
     async getExplains() {
-        const url = 'https://miao-magic-dev-restapi.co-mall.com/CARPARK/front/carparks/subsite/4'
+        const url = `${baseUrl}/CARPARK/front/carparks/subsite/4`
         const params = {
             extraData: {},
             header: {
@@ -41,7 +41,7 @@ export default {
         }
     },
     getPlateNumbers() {
-        const url = 'https://miao-magic-dev-restapi.co-mall.com/CARPARK/front/car_numbers?id=72002'
+        const url = `${baseUrl}/CARPARK/front/car_numbers?id=72002`
         const params = {
             extraData: {
                 id: '72002'
@@ -63,7 +63,7 @@ export default {
         })
     },
     async onSearch() {
-        const url = 'https://miao-magic-dev-restapi.co-mall.com/CARPARK/front/carpark_checkouts'
+        const url = `${baseUrl}/CARPARK/front/carpark_checkouts`
         const params = {
             extraData: {
                 car_number: this.plateNumber
@@ -85,7 +85,7 @@ export default {
         }
     },
     async deletePlateNumberById(id) {
-        const url = `https://miao-magic-dev-restapi.co-mall.com/CARPARK/front/car_numbers/delete_carnumber/${id}`
+        const url = `${baseUrl}/CARPARK/front/car_numbers/delete_carnumber/${id}`
         const params = {
             extraData: {},
             header: {

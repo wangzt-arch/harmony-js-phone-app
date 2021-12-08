@@ -49,3 +49,5 @@ export default function hmsHttp(url, params, method) {
     });
     return promise
 }
+
+export const baseUrl = 'https://miao-magic-dev-restapi.co-mall.com'
