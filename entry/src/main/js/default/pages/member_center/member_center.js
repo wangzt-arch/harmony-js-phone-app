@@ -19,6 +19,7 @@ export default {
         })
     },
     async onGetUserMessage() {
+        const url = "https://miao-magic-dev-restapi.co-mall.com/api/v2/profiles/mine"
         try {
             const params = {
                 extraData: {},
@@ -28,7 +29,7 @@ export default {
                     subsiteId: '4'
                 }
             }
-            const res = await hmsHttp("https://miao-magic-dev-restapi.co-mall.com/api/v2/profiles/mine", params, 'GET')
+            const res = await hmsHttp(url, params, 'GET')
             console.log(JSON.stringify(res.result))
             console.log(res.responseCode)
             const result = JSON.parse(res.result)
@@ -49,6 +50,8 @@ export default {
                 header: {
                     userId: 72002,
                     userSession: "45c6075d01944580ae580a57c5af0fa3",
+                    //                    userId: 70003,
+                    //                    userSession: "0df085d175ee4e18bbae5c1203a8f191",
                     subsiteId: '4'
                 }
             }
@@ -58,7 +61,6 @@ export default {
             const result = JSON.parse(res.result)
             this.pointAmount = result.point_amount
             this.couponCount = result.member_coupon_count
-
         }
         catch (err) {
             console.info(err)
