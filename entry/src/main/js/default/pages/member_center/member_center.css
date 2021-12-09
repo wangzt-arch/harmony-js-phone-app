@@ -198,7 +198,8 @@
     margin-bottom: 31px;
 }
 .code-card_no{
-    width: 376px;
+    width: 100%;
+    text-align: center;
     height: 38px;
     margin-bottom: 10px;
     font-size: 27px;

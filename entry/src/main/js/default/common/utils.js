@@ -30,6 +30,13 @@ function fill(number, length) {
     return str;
 }
 
+export function separate_4_4_n_3(str) {
+    return str.replace(
+        /(.{4})(.{4})(.+)(.{3})/,
+        (_, $1, $2, $3, $4) => `${$1} ${$2} ${$3} ${$4}`
+    );
+};
+
 export default function hmsHttp(url, params, method) {
     let httpRequest = http.createHttp();
     let promise = httpRequest.request(url, {

@@ -34,9 +34,9 @@ export default {
         }
     },
     async login() {
-        //        router.push({
-        //         uri: 'pages/home/home'
-        //        })
+        router.push({
+            uri: 'pages/home/home'
+        })
         try {
             const url = `${baseUrl}/api/members/members_login_by_mobile`
             const params = {

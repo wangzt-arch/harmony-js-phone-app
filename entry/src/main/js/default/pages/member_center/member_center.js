@@ -1,4 +1,4 @@
-import hmsHttp, {baseUrl, userId, userSession, subsiteId} from '../../common/utils.js';
+import hmsHttp, {baseUrl, userId, userSession, subsiteId, separate_4_4_n_3} from '../../common/utils.js';
 import router from '@system.router';
 
 export default {
@@ -10,7 +10,7 @@ export default {
         cardLevelName: '普卡',
         maxExperience: 300,
         experience: 150,
-        cardNo:'6275 9803 38918829 599'
+        cardNo: '6275 9803 38918829 599'
     },
     showCodeCard() {
         this.$element('code-card').show()
@@ -43,8 +43,7 @@ export default {
             this.nickname = result.nick_name
             this.avatar = result.pic
             this.cardLevelName = result.card_level_name
-            this.cardNo=result.card_no
-
+            this.cardNo = separate_4_4_n_3(result.card_no)
         }
         catch (err) {
             console.info(err)

@@ -34,7 +34,7 @@
                         </swiper>
                     </div>
                     <div class="image-navigate">
-                        <div class="image-navigate_item" for="{{ [1, 2, 2, 5, 3] }}">
+                        <div class="image-navigate_item" for="{{ [1, 2, 2, 5, 3] }}" onclick="onNavigateToParking">
                             <image class="image-navigate_item_image"
                                    src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon_service_parking.png">
                             </image>

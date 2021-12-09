@@ -10,5 +10,10 @@ export default {
         router.push({
             uri: 'pages/subsite_list/subsite_list'
         })
-    }
+    },
+    onNavigateToParking() {
+        router.push({
+            uri: 'pages/parking/parking'
+        })
+    },
 }
