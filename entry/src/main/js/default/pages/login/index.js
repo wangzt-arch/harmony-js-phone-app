@@ -48,11 +48,11 @@ export default {
                     subsiteId: subsiteId
                 }
             }
-            const res = await hmsHttp(url, params, "POST")
-            const hmsString = JSON.stringify(res)
-            console.log(hmsString)
-            console.log(res)
-            console.log(JSON.stringify(res.result))
+
+            const res = await  hmsHttp(url, params, "POST")
+            const resString = JSON.stringify(res)
+            const resObj = JSON.parse(resString)
+            console.log(resString)
         }
         catch (err) {
             console.info(err)
