@@ -88,7 +88,8 @@ export default {
             console.log(JSON.stringify(res.result))
             console.log(res.responseCode)
             const result = JSON.parse(res.result)
-
+            this.experience = result[0].experience
+            this.maxExperience = result[0].experience_upper_limit
         }
         catch (err) {
             console.info(err)

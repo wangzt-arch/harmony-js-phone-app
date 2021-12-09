@@ -10,7 +10,7 @@
             <image class="code-icon" src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon-code.png"></image>
         </div>
     </div>
-    <div class="user-card">
+    <div class="user-card" onclick="onGetCard">
         <div class="user-card-title">
             <text>{{ cardLevelName }}</text>
             <text>{{ experience }}/{{ maxExperience }}</text>
