@@ -1,18 +1,21 @@
 <div class="container">
-    <div class="user-message" onclick="onNavigateToProfile">
-        <image class="user-avatar" src="{{ avatar }}">
+    <div class="user-message">
+        <image class="user-avatar" src="{{ avatar }}" onclick="onNavigateToProfile">
         </image>
         <div class="message-right">
             <text class="user-nickname">{{ nickname }}</text>
             <image class="user-rank" src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon_level.png"></image>
         </div>
+        <div class="message-code" onclick="showCodeCard">
+            <image class="code-icon" src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon-code.png"></image>
+        </div>
     </div>
     <div class="user-card">
         <div class="user-card-title">
             <text>{{ cardLevelName }}</text>
-            <text>0/500</text>
+            <text>{{ experience }}/{{ maxExperience }}</text>
         </div>
-        <slider class="user-card-slider" max="500" value="200"></slider>
+        <slider class="user-card-slider" max="{{ maxExperience }}" value="{{ experience }}"></slider>
     </div>
     <div class="user-integral">
         <div class="user-integral-box" onclick="onGetUserAssets">
@@ -46,4 +49,26 @@
             </div>
         </div>
     </div>
+    <dialog dragable="true" id="code-card" class="code-card">
+        <div class="code-card-box">
+            <div class="code-card_header">
+                <text>
+                    <span>会员码</span>
+                </text>
+                <text>
+                    <span>购物时请出示此电子会员码</span>
+                </text>
+            </div>
+            <qrcode value="231342" class="code-card_code"></qrcode>
+            <text class="code-card_no">
+                <span>NO.{{ cardNo }}</span>
+            </text>
+            <div class="code-card_footer">
+                <image src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon_popup_footer.png">
+    
+                </image>
+            </div>
+        </div>
+
+    </dialog>
 </div>

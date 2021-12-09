@@ -1,5 +1,5 @@
 import router from '@system.router';
-import hmsHttp, {baseUrl} from '../../common/utils.js';
+import hmsHttp, {baseUrl, userId, userSession, subsiteId} from '../../common/utils.js';
 
 export default {
     data: {
@@ -15,9 +15,9 @@ export default {
                 id: '72002'
             },
             header: {
-                userId: 72002,
-                userSession: "45c6075d01944580ae580a57c5af0fa3",
-                subsiteId: '4'
+                userId: userId,
+                userSession: userSession,
+                subsiteId: subsiteId
             }
         }
 
@@ -35,9 +35,9 @@ export default {
         const params = {
             extraData: {},
             header: {
-                userId: '72002',
-                subsiteId: "4",
-                userSession: "45c6075d01944580ae580a57c5af0fa3"
+                userId: userId,
+                subsiteId: subsiteId,
+                userSession: userSession
             }
         }
         try {

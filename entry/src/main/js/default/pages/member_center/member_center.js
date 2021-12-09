@@ -1,4 +1,4 @@
-import hmsHttp, {baseUrl} from '../../common/utils.js';
+import hmsHttp, {baseUrl, userId, userSession, subsiteId} from '../../common/utils.js';
 import router from '@system.router';
 
 export default {
@@ -7,7 +7,13 @@ export default {
         avatar: '',
         couponCount: 0,
         pointAmount: 0,
-        cardLevelName: ''
+        cardLevelName: '普卡',
+        maxExperience: 300,
+        experience: 150,
+        cardNo:'6275 9803 38918829 599'
+    },
+    showCodeCard() {
+        this.$element('code-card').show()
     },
     onInit() {
         this.onGetUserAssets(),
@@ -25,9 +31,9 @@ export default {
             const params = {
                 extraData: {},
                 header: {
-                    userId: 72002,
-                    userSession: "45c6075d01944580ae580a57c5af0fa3",
-                    subsiteId: '4'
+                    userId: userId,
+                    userSession: userSession,
+                    subsiteId: subsiteId
                 }
             }
             const res = await hmsHttp(url, params, 'GET')
@@ -37,6 +43,7 @@ export default {
             this.nickname = result.nick_name
             this.avatar = result.pic
             this.cardLevelName = result.card_level_name
+            this.cardNo=result.card_no
 
         }
         catch (err) {
@@ -49,11 +56,11 @@ export default {
             const params = {
                 extraData: {},
                 header: {
-                    userId: 72002,
-                    userSession: "45c6075d01944580ae580a57c5af0fa3",
+                    userId: userId,
+                    userSession: userSession,
                     //                    userId: 70003,
                     //                    userSession: "0df085d175ee4e18bbae5c1203a8f191",
-                    subsiteId: '4'
+                    subsiteId: subsiteId
                 }
             }
             const res = await hmsHttp(url, params, 'GET')
@@ -73,9 +80,9 @@ export default {
             const params = {
                 extraData: {},
                 header: {
-                    userId: 72002,
-                    userSession: "45c6075d01944580ae580a57c5af0fa3",
-                    subsiteId: '4'
+                    userId: userId,
+                    userSession: userSession,
+                    subsiteId: subsiteId
                 }
             }
             const res = await hmsHttp(url, params, 'GET')

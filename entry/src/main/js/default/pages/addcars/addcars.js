@@ -1,5 +1,5 @@
 import router from '@system.router';
-import hmsHttp, {baseUrl} from '../../common/utils.js';
+import hmsHttp, {baseUrl, userId, userSession, subsiteId} from '../../common/utils.js';
 
 export default {
     data: {
@@ -22,9 +22,9 @@ export default {
                 car_number: this.plateNumber
             },
             header: {
-                userId: '72002',
-                userSession: "45c6075d01944580ae580a57c5af0fa3",
-                subsiteId: '4'
+                userId:userId,
+                userSession: userSession,
+                subsiteId: subsiteId
             }
         }
         try {

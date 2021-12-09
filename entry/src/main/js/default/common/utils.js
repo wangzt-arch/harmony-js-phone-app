@@ -49,5 +49,12 @@ export default function hmsHttp(url, params, method) {
     });
     return promise
 }
+const env = "qa"
 
-export const baseUrl = 'https://miao-magic-dev-restapi.co-mall.com'
+export const baseUrl = 'https://miao-magic-test-restapi.co-mall.com'
+
+export const userId = env === 'qa' ? '140007' : '72002'
+
+export const userSession = env === 'qa' ? '4f33f8b3fb904beda690187bb0e23f4a' : '45c6075d01944580ae580a57c5af0fa3'
+
+export const subsiteId = '4'

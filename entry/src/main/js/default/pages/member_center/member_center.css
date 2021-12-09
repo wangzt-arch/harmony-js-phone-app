@@ -6,6 +6,28 @@
     background-color: #F6F6F6;
 }
 
+.user-message {
+    position: relative;
+    width: 100%;
+}
+
+.message-code {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 92px;
+    height: 92px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 44px;
+}
+
+.code-icon {
+    width: 46px;
+    height: 46px;
+}
+
 .user-avatar {
     width: 123px;
     height: 123px;
@@ -37,8 +59,7 @@
     height: 108px;
     margin-top: 67px;
     padding: 15px 61px;
-    background: linear-gradient(307deg, #34322A 0%, #121212 100%);
-/*    box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.4);*/
+    background: linear-gradient(307deg, #34322A 0%, #121212 100%);/*    box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.4);*/
     border-radius: 0px 0px 20px 20px;
 }
 
@@ -122,11 +143,13 @@
     height: 138px;
     background-color: #ffffff;
 }
-.server-content-item-icon{
+
+.server-content-item-icon {
     width: 43px;
     height: 43px;
 }
-.server-content-item-title{
+
+.server-content-item-title {
     width: 100%;
     height: 31px;
     align-items: center;
@@ -136,4 +159,56 @@
     font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;
     color: #000000;
+}
+
+.code-card {/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: flex-start;*/
+/*    justify-content: flex-start;*/
+/*    align-items: center;*/
+    width: 630px;
+    height: 707px;
+    margin-bottom: 30%;
+}
+
+.code-card-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.code-card_header {
+    width: 518px;
+    height: 123px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #AB8E66;
+    color: #FFFFFF;
+    border-radius: 54px 54px 0px 0px;
+
+}
+.code-card_code{
+    width: 315px;
+    height: 315px;
+    margin-top: 77px;
+    margin-bottom: 31px;
+}
+.code-card_no{
+    width: 376px;
+    height: 38px;
+    margin-bottom: 10px;
+    font-size: 27px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #000000;
+    line-height: 38px;
+}
+.code-card_footer{
+    width: 630px;
+    height: 115px;
+    border-top: 1px dashed #000000;
 }

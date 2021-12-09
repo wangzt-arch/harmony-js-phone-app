@@ -1,4 +1,4 @@
-import hmsHttp, {baseUrl} from '../../common/utils'
+import hmsHttp, {baseUrl, subsiteId} from '../../common/utils'
 import router from '@system.router';
 
 export default {
@@ -34,6 +34,9 @@ export default {
         }
     },
     async login() {
+        //        router.push({
+        //         uri: 'pages/home/home'
+        //        })
         try {
             const url = `${baseUrl}/api/members/members_login_by_mobile`
             const params = {
@@ -41,18 +44,18 @@ export default {
                     phone_number: this.mobile,
                     sms_verify_code: this.verifySms
                 },
-                header: {}
+                header: {
+                    subsiteId: subsiteId
+                }
             }
-            const res = await hmsHttp(url, params, 'POST')
+            const res = await hmsHttp(url, params, "POST")
             const hmsString = JSON.stringify(res)
             console.log(hmsString)
+            console.log(res)
             console.log(JSON.stringify(res.result))
         }
         catch (err) {
             console.info(err)
         }
-        router.push({
-            uri: 'pages/home/home'
-        })
     }
 }
