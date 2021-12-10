@@ -34,7 +34,7 @@ export default {
         }
     },
     async login() {
-        router.push({
+        router.replace({
             uri: 'pages/home/home'
         })
         try {

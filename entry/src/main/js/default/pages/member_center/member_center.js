@@ -20,6 +20,9 @@ export default {
         this.onGetUserMessage(),
         this.onGetCard()
     },
+    onShow(){
+        this.onGetUserMessage()
+    },
     onNavigateTo() {
         router.push({
             uri: 'pages/parking/parking'

@@ -1,16 +1,123 @@
-.container {
+.profile {
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 0px;
-    top: 0px;
-    width: 454px;
-    height: 454px;
+    flex-direction: column;
+    background-color: #F6F6F6;
 }
 
-.title {
-    font-size: 30px;
-    text-align: center;
-    width: 200px;
-    height: 100px;
+.profile_box {
+    padding: 27px 31px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 1px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+.box_right {
+    display: flex;
+    align-items: center;
+}
+
+.right_avatar {
+    width: 92px;
+    height: 92px;
+}
+
+.right_arrow {
+    width: 10px;
+    height: 20px;
+    margin-left: 19px;
+}
+
+.box_left {
+    font-size: 27px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 38px;
+}
+
+.profile_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 720px;
+    height: 96px;
+    background-color: #FFFFFF;
+}
+
+.profile_divider {
+    width: 720px;
+    height: 23px;
+    background-color: #F6F6F6;
+}
+
+.nickname-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 31px;
+    display: flex;
+    background-color: #FFFFFF;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nickname-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nickname-input {
+    width: 659px;
+    height: 96px;
+    padding-left: 0;
+    border-radius: 0px;
+    border-bottom: 1px solid #e3e3e3;
+    background-color: transparent;
+}
+
+.button_cancel,.button_confirm {
+    width: 315px;
+    height: 77px;
+    background-color: #007046;
+    border-radius: 52px;
+}
+
+.button_cancel {
+    background-color: #FFFFFF;
+    text-color: #000000;
+    border: 2px solid #E3E3E3;
+}
+
+.nickname-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nickname_close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 42px;
+    height: 42px;
+}
+.nickname-input-tip{
+    width: 100%;
+    height: 33px;
+    font-size: 23px;
+    margin-top: 10px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #666666;
+    line-height: 33px;
 }
