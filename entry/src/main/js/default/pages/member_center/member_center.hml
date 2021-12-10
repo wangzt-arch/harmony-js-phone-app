@@ -65,10 +65,22 @@
             </text>
             <div class="code-card_footer">
                 <image src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon_popup_footer.png">
-    
+
                 </image>
             </div>
         </div>
 
     </dialog>
+    <div class="tab-bar">
+        <div onclick="onNavigateToHome">
+            <text>
+                <span>首页</span>
+            </text>
+        </div>
+        <div class="tab-bar--select">
+            <text>
+                <span>我的</span>
+            </text>
+        </div>
+    </div>
 </div>

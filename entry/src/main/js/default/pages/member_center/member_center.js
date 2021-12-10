@@ -15,13 +15,10 @@ export default {
     showCodeCard() {
         this.$element('code-card').show()
     },
-    onInit() {
+    onShow() {
         this.onGetUserAssets(),
         this.onGetUserMessage(),
         this.onGetCard()
-    },
-    onShow(){
-        this.onGetUserMessage()
     },
     onNavigateTo() {
         router.push({
@@ -101,6 +98,11 @@ export default {
     onNavigateToProfile() {
         router.push({
             uri: 'pages/profile/profile'
+        })
+    },
+    onNavigateToHome() {
+        router.replace({
+            uri: 'pages/home/home'
         })
     }
 }

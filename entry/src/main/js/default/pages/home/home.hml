@@ -2,54 +2,98 @@
 <element name="parking" src="../parking/parking.hml"></element>
 <element name="member_center" src="../member_center/member_center.hml"></element>
 <div class="container">
-    <tabs class="tabs">
-
-        <tab-content class="tabContent">
-            <div class="tabContent">
-                <div class="home">
-                    <div class="home-header">
-                        <image class="home-header_icon"
-                               src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon-position.png"></image>
-                        <div class="home-header_name" onclick="onNavigateToSubsiteList">
-                            <text>{{ subsiteName }}</text>
-                        </div>
-                        <image class="home-header_search"
-                               src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon_search%402x.png"></image>
+    <div class="home">
+        <div class="home-header">
+            <image class="home-header_icon"
+                   src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon-position.png"></image>
+            <div class="home-header_name" onclick="onNavigateToSubsiteList">
+                <text>{{ subsiteName }}</text>
+            </div>
+            <image class="home-header_search"
+                   src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon_search%402x.png"></image>
+        </div>
+        <div class="image-ad">
+            <swiper class="image-ad_swiper" id="swiper" index="0" indicator="true" loop="true"
+                    digital="false" cachedsize="-1"
+                    scrolleffect="spring">
+                <div class="image-ad_swiper_item" for="{{ [, 1, 1, 1, 1, 2] }}">
+                    <image src="{{ imageAdBanner }}" class="image-ad_swiper_item_img">
+                    </image>
+                    <div class="image-ad_first-title">
+                        <text>LAMER 海蓝之谜</text>
                     </div>
-                    <div class="image-ad">
-                        <swiper class="image-ad_swiper" id="swiper" index="0" indicator="true" loop="true"
-                                digital="false" cachedsize="-1"
-                                scrolleffect="spring">
-                            <div class="image-ad_swiper_item" for="{{ [, 1, 1, 1, 1, 2] }}">
-                                <image src="{{ imageAdBanner }}" class="image-ad_swiper_item_img">
-                                </image>
-                                <div class="image-ad_first-title">
-                                    <text>LAMER 海蓝之谜</text>
-                                </div>
-                                <div class="image-ad_second-title">
-                                    <text>挚爱追随 海蓝之谜奢宠之旅</text>
-                                </div>
-                            </div>
-
-                        </swiper>
-                    </div>
-                    <div class="image-navigate">
-                        <div class="image-navigate_item" for="{{ [1, 2, 2, 5, 3] }}" onclick="onNavigateToParking">
-                            <image class="image-navigate_item_image"
-                                   src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon_service_parking.png">
-                            </image>
-                            <text class="image-navigate_item_title">停车缴费</text>
-                        </div>
+                    <div class="image-ad_second-title">
+                        <text>挚爱追随 海蓝之谜奢宠之旅</text>
                     </div>
                 </div>
+
+            </swiper>
+        </div>
+        <div class="image-navigate">
+            <div class="image-navigate_item" for="{{ [1, 2, 2, 5, 3] }}" onclick="onNavigateToParking">
+                <image class="image-navigate_item_image"
+                       src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon_service_parking.png">
+                </image>
+                <text class="image-navigate_item_title">停车缴费</text>
             </div>
-            <div class="tabContent">
-                <member_center></member_center>
-            </div>
-        </tab-content>
-        <tab-bar class="tabBar">
-            <text class="tabBarItem">首页</text>
-            <text class="tabBarItem">会员中心</text>
-        </tab-bar>
-    </tabs>
+        </div>
+    </div>
+    <div class="tab-bar">
+        <div class="tab-bar--select">
+            <text><span>首页</span></text>
+        </div>
+        <div onclick="onNavigateToMember">
+            <text><span>我的</span></text>
+        </div>
+    </div>
+<!--    <tabs class="tabs">-->
+
+<!--        <tab-content class="tabContent">-->
+<!--            <div class="tabContent">-->
+<!--                <div class="home">-->
+<!--                    <div class="home-header">-->
+<!--                        <image class="home-header_icon"-->
+<!--                               src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon-position.png"></image>-->
+<!--                        <div class="home-header_name" onclick="onNavigateToSubsiteList">-->
+<!--                            <text>{{ subsiteName }}</text>-->
+<!--                        </div>-->
+<!--                        <image class="home-header_search"-->
+<!--                               src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon_search%402x.png"></image>-->
+<!--                    </div>-->
+<!--                    <div class="image-ad">-->
+<!--                        <swiper class="image-ad_swiper" id="swiper" index="0" indicator="true" loop="true"-->
+<!--                                digital="false" cachedsize="-1"-->
+<!--                                scrolleffect="spring">-->
+<!--                            <div class="image-ad_swiper_item" for="{{ [, 1, 1, 1, 1, 2] }}">-->
+<!--                                <image src="{{ imageAdBanner }}" class="image-ad_swiper_item_img">-->
+<!--                                </image>-->
+<!--                                <div class="image-ad_first-title">-->
+<!--                                    <text>LAMER 海蓝之谜</text>-->
+<!--                                </div>-->
+<!--                                <div class="image-ad_second-title">-->
+<!--                                    <text>挚爱追随 海蓝之谜奢宠之旅</text>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                        </swiper>-->
+<!--                    </div>-->
+<!--                    <div class="image-navigate">-->
+<!--                        <div class="image-navigate_item" for="{{ [1, 2, 2, 5, 3] }}" onclick="onNavigateToParking">-->
+<!--                            <image class="image-navigate_item_image"-->
+<!--                                   src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon_service_parking.png">-->
+<!--                            </image>-->
+<!--                            <text class="image-navigate_item_title">停车缴费</text>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="tabContent">-->
+<!--                <member_center></member_center>-->
+<!--            </div>-->
+<!--        </tab-content>-->
+<!--        <tab-bar class="tabBar">-->
+<!--            <text class="tabBarItem">首页</text>-->
+<!--            <text class="tabBarItem">会员中心</text>-->
+<!--        </tab-bar>-->
+<!--    </tabs>-->
 </div>

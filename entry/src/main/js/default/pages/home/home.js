@@ -16,4 +16,9 @@ export default {
             uri: 'pages/parking/parking'
         })
     },
+    onNavigateToMember() {
+        router.replace({
+            uri: 'pages/member_center/member_center'
+        })
+    }
 }

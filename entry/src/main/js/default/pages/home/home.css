@@ -127,3 +127,14 @@
     color: #000000;
     line-height: 35px;
 }
+.tab-bar{
+    position: fixed;
+    bottom: 0px;
+    width: 720px;
+    height: 94px;
+    display: flex;
+    justify-content: space-around;
+}
+.tab-bar--select{
+    color: #2D6F6B;
+}

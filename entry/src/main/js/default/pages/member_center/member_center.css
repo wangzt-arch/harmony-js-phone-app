@@ -213,3 +213,14 @@
     height: 115px;
     border-top: 1px dashed #000000;
 }
+.tab-bar{
+    position: fixed;
+    bottom: 0px;
+    width: 720px;
+    height: 94px;
+    display: flex;
+    justify-content: space-around;
+}
+.tab-bar--select{
+    color: #2D6F6B;
+}
