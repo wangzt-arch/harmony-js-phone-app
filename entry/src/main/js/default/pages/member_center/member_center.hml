@@ -4,7 +4,7 @@
         </image>
         <div class="message-right">
             <text class="user-nickname">{{ nickname }}</text>
-            <image class="user-rank" src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon_level.png"></image>
+            <image class="user-rank" src="{{ memberCardLevel }}"></image>
         </div>
         <div class="message-code" onclick="showCodeCard">
             <image class="code-icon" src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon-code.png"></image>

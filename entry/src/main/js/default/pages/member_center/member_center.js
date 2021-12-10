@@ -10,7 +10,8 @@ export default {
         cardLevelName: '普卡',
         maxExperience: 300,
         experience: 150,
-        cardNo: '6275 9803 38918829 599'
+        cardNo: '6275 9803 38918829 599',
+        memberCardLevel: ''
     },
     showCodeCard() {
         this.$element('code-card').show()
@@ -42,6 +43,7 @@ export default {
             const result = JSON.parse(res.result)
             this.nickname = result.nick_name
             this.avatar = result.pic
+            this.memberCardLevel = result.member_card.member_level_pic
             this.cardLevelName = result.card_level_name
             this.cardNo = separate_4_4_n_3(result.card_no)
         }

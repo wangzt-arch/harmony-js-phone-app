@@ -13,7 +13,7 @@
                    src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon_search%402x.png"></image>
         </div>
         <div class="image-ad">
-            <swiper class="image-ad_swiper" id="swiper" index="0" indicator="true" loop="true"
+            <swiper class="image-ad_swiper" id="swiper" autoplay="true" index="0" indicator="true" loop="true"
                     digital="false" cachedsize="-1"
                     scrolleffect="spring">
                 <div class="image-ad_swiper_item" for="{{ [, 1, 1, 1, 1, 2] }}">
