@@ -62,6 +62,11 @@ export default {
             uri: 'pages/login/index'
         })
     },
+    onNavigateToInfo() {
+        router.push({
+            uri: 'pages/member_info/member_info'
+        })
+    },
     onOpenNickname() {
         this.$element('change-nickname').show()
     },

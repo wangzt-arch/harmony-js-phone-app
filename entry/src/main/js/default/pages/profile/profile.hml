@@ -29,7 +29,7 @@
             </image>
         </div>
     </div>
-    <div class="profile_box">
+    <div class="profile_box" onclick="onNavigateToInfo">
         <div class="box_left">
             <text>完善信息</text>
         </div>

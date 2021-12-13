@@ -1,0 +1,50 @@
+<div class="member-info">
+    <div class="info-box">
+        <div class="info-item">
+            <text>姓名</text>
+            <input dir="rtl" class="item-input" placeholder="请输入您的真实姓名" value="{{ name }}"></input>
+        </div>
+        <div class="info-item">
+            <text>性别</text>
+            <text onclick="onSexBoxShow">{{ sex }}</text>
+        </div>
+        <div class="info-item">
+            <text>生日</text>
+            <text onclick="onBirthdayBoxShow">{{birthday}}</text>
+        </div>
+        <div class="info-item">
+            <text>证件类型</text>
+            <text>身份证</text>
+        </div>
+        <div class="info-item">
+            <text>证件号码</text>
+            <input type="number" dir="rtl" class="item-input" placeholder="请输入您的身份证号码"></input>
+        </div>
+    </div>
+    <div class="tip-box">
+        <text class="tip-box_title">
+            *以上内容提交后，将无法再次修改；如需修改，请联系客服处理
+        </text>
+        <button class="tip-box_confirm" disabled="{{ disabled }}">
+            确定
+        </button>
+    </div>
+    <panel id="select-sex" type="temporary" mode="half" dragbar="false" miniheight="200px">
+        <div class="sex-box">
+            <div class="sex-box_close" dir="rtl">
+                <text onclick="onSexBoxClose">×</text>
+            </div>
+            <picker-view type="text" selected="{{ textSelect }}" range="{{ sexValue }}" onchange="onChangeSex">
+            </picker-view>
+        </div>
+    </panel>
+    <panel id="select-birthday" type="temporary" mode="half" dragbar="false" miniheight="200px">
+        <div class="birthday-box">
+            <div class="birthday-box_close" dir="rtl">
+                <text onclick="onBirthdayBoxClose">×</text>
+            </div>
+            <picker-view type="date" onchange="onChangeBirthday">
+            </picker-view>
+        </div>
+    </panel>
+</div>
