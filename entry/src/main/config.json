@@ -103,7 +103,8 @@
           "pages/home/home",
           "pages/subsite_list/subsite_list",
           "pages/profile/profile",
-          "pages/member_info/member_info"
+          "pages/member_info/member_info",
+          "pages/parking_checkout/parking_checkout"
         ],
         "name": "default",
         "window": {

@@ -1,0 +1,63 @@
+.parking-checkout {
+    width: 100%;
+    height: 100%;
+    padding: 31px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F6F6;
+}
+
+.parking-checkout_plate-number {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 659px;
+    height: 138px;
+    padding: 0px 31px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+}
+
+.parking-checkout_info {
+    display: flex;
+    width: 659px;
+    margin-top: 23px;
+    flex-direction: column;
+    padding: 8px 31px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+}
+
+.info_item {
+    width: 100%;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.parking-checkout_coupon{
+    display: flex;
+    width: 659px;
+    margin-top: 23px;
+    flex-direction: column;
+    padding: 8px 31px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+}
+.parking-checkout_footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0px;
+    width: 720px;
+    height: 138px;
+    padding: 0px 31px;
+    background-color: #FFFFFF;
+}
+.footer_pay{
+    width: 223px;
+    height: 77px;
+    background-color: #007046;
+    border-radius: 52px;
+}

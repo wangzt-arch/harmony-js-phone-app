@@ -27,7 +27,7 @@ export default {
             extraData: {},
             header: {
                 userId: userId,
-                subsiteId:subsiteId
+                subsiteId: subsiteId
             }
         }
         try {
@@ -64,6 +64,9 @@ export default {
         })
     },
     async onSearch() {
+        router.push({
+            uri: 'pages/parking_checkout/parking_checkout'
+        })
         const url = `${baseUrl}/CARPARK/front/carpark_checkouts`
         const params = {
             extraData: {

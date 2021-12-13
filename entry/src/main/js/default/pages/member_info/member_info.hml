@@ -25,7 +25,7 @@
         <text class="tip-box_title">
             *以上内容提交后，将无法再次修改；如需修改，请联系客服处理
         </text>
-        <button class="tip-box_confirm" disabled="{{ disabled }}">
+        <button class="tip-box_confirm" disabled="{{ disabled }}" onclick="onConfirm">
             确定
         </button>
     </div>

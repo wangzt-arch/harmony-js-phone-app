@@ -1,0 +1,49 @@
+<div class="parking-checkout">
+    <div class="parking-checkout_plate-number">
+        <text>京 A00000</text>
+        <div>
+            <text>绑定车牌</text>
+            <input type="checkbox" checked="false"></input>
+        </div>
+    </div>
+    <div class="parking-checkout_info">
+        <div class="info_item">
+            <text>车场名称</text>
+            <text>安贞门</text>
+        </div>
+        <div class="info_item">
+            <text>入场时间</text>
+            <text>2021-3-4 13：00</text>
+        </div>
+        <div class="info_item">
+            <text>停车时长</text>
+            <text>3小时7分钟16秒</text>
+        </div>
+        <div class="info_item">
+            <text>缴费金额</text>
+            <text>¥24.00</text>
+        </div>
+    </div>
+    <div class="parking-checkout_coupon">
+        <div class="info_item">
+            <text>入场时间</text>
+            <text>2021-3-4 13：00</text>
+        </div>
+        <div class="info_item">
+            <text>停车时长</text>
+            <text>3小时7分钟16秒</text>
+        </div>
+        <div class="info_item">
+            <text>缴费金额</text>
+            <text>¥24.00</text>
+        </div>
+    </div>
+    <div class="parking-checkout_footer">
+        <text>
+            应付 ¥ 18.00
+        </text>
+        <button class="footer_pay">
+            立即支付
+        </button>
+    </div>
+</div>
