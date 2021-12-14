@@ -1,0 +1,109 @@
+.my-coupons {
+    display: flex;
+    flex-direction: column;
+    padding-top: 84px;
+}
+
+.tab-bar-box {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    width: 720px;
+    height: 84px;
+}
+
+.selected {
+    color: #007046
+}
+
+.tab-bar-item {
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.my-coupons-box {
+    flex-direction: column;
+    width: 720px;
+    padding: 31px 31px 0 31px;
+    background-color: #F6F6F6;
+}
+
+.my-coupons_coupon {
+    width: 659px;
+    height: 177px;
+    margin-bottom: 31px;
+    background-image: url('https://puzhehei.oss-cn-beijing.aliyuncs.com/miao/coupon_nomal_bg.png');
+}
+
+.coupon_left {
+    width: 192px;
+    height: 177px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coupon_price {
+    font-size: 65px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #000000;
+    line-height: 65px;
+    margin-top: 36px;
+}
+
+.coupon_price_tip {
+    font-size: 29px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 40px;
+}
+
+.coupon_tip {
+    font-size: 23px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 33px;
+    margin-top: 12px;
+}
+
+.coupon_right {
+    width: 467px;
+    height: 177px;
+    display: flex;
+    flex-direction: column;
+    padding: 31px;
+}
+
+.coupon_name {
+    height: 38px;
+    font-size: 27px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #000000;
+    line-height: 38px;
+}
+
+.coupon_address {
+    height: 31px;
+    font-size: 21px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 31px;
+}
+
+.coupon_date {
+    height: 31px;
+    font-size: 21px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #666666;
+    line-height: 31px;
+    margin-top: 15px;
+}

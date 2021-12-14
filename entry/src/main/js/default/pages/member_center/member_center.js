@@ -11,7 +11,8 @@ export default {
         maxExperience: 300,
         experience: 150,
         cardNo: '6275 9803 38918829 599',
-        memberCardLevel: ''
+        memberCardLevel: '',
+        servers:['停车缴费','领券中心']
     },
     showCodeCard() {
         this.$element('code-card').show()
@@ -21,10 +22,18 @@ export default {
         this.onGetUserMessage(),
         this.onGetCard()
     },
-    onNavigateTo() {
-        router.push({
-            uri: 'pages/parking/parking'
-        })
+    onNavigateTo(idx) {
+        if (idx === 0) {
+            router.push({
+                uri: 'pages/parking/parking'
+            })
+        }
+        if (idx === 1) {
+            router.push({
+                uri: 'pages/my_coupons/my_coupons'
+            })
+        }
+
     },
     async onGetUserMessage() {
         const url = `${baseUrl}/api/v2/profiles/mine`

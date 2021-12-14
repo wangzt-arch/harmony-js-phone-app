@@ -50,7 +50,7 @@ export default {
         }
     },
     async postCarparkOrders() {
-        const url = `${baseUrl}CARPARK/front/carpark_orders`
+        const url = `${baseUrl}/CARPARK/front/carpark_orders`
         const params = {
             extraData: {
                 car_number: this.plateNumber,

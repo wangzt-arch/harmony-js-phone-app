@@ -104,7 +104,8 @@
           "pages/subsite_list/subsite_list",
           "pages/profile/profile",
           "pages/member_info/member_info",
-          "pages/parking_checkout/parking_checkout"
+          "pages/parking_checkout/parking_checkout",
+          "pages/my_coupons/my_coupons"
         ],
         "name": "default",
         "window": {

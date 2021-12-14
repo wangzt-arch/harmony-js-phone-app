@@ -40,11 +40,11 @@
             <text>服务</text>
         </div>
         <div class="server-content">
-            <div class="server-content-item" onclick="onNavigateTo" for="{{ [1, 2, 3, 4] }}">
+            <div class="server-content-item" onclick="onNavigateTo({{ $idx }})" for="{{ servers }}">
                 <image class="server-content-item-icon"
                        src="https://puzhehei.oss-cn-beijing.aliyuncs.com/global/icon_service_parking.png"></image>
                 <text class="server-content-item-title">
-                    停车缴费
+                    {{ $item }}
                 </text>
             </div>
         </div>

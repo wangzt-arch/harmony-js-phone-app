@@ -1,0 +1,25 @@
+<div class="my-coupons">
+    <div class="tab-bar-box">
+        <div for="{{ tabBars }}" class="tab-bar-item">
+            <text onclick="onSelectType({{ $idx }})">
+                {{ $item }}
+            </text>
+        </div>
+    </div>
+    <div class="my-coupons-box">
+        <div class="my-coupons_coupon" for="{{ [, 1, 1, 1, 1, 1, 1, 2, 4, 2, 5, 5] }}">
+            <div class="coupon_left">
+                <div class="coupon_price">
+                    <text class="coupon_price_tip">¥</text>
+                    <text>100</text>
+                </div>
+                <text class="coupon_tip">满1000可用</text>
+            </div>
+            <div class="coupon_right">
+                <text class="coupon_name">LAMER现金抵值券</text>
+                <text class="coupon_address">COMALL商城使用</text>
+                <text class="coupon_date">有效期: 2021.05.16</text>
+            </div>
+        </div>
+    </div>
+</div>
