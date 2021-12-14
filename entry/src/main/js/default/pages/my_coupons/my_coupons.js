@@ -3,6 +3,7 @@ import hmsHttp, {baseUrl, userId, userSession, subsiteId} from '../../common/uti
 export default {
     data: {
         tabBars: ['全部', '礼品券', '停车券'],
+        coupons:[]
     },
     onInit() {
         this.getCoupons()
@@ -33,8 +34,10 @@ export default {
         try {
             const res = await  hmsHttp(url, params, "GET")
             const resString = JSON.stringify(res)
-            const resObj = JSON.parse(res.result)
-            console.log(resString)
+            const result = JSON.parse(res.result)
+            this.coupons=result.result
+            console.log(JSON.stringify(res.result))
+//            console.log(resString)
         }
         catch (err) {
             console.info(err)
