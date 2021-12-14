@@ -55,7 +55,7 @@ export default {
             extraData: {
                 car_number: this.plateNumber,
                 car_number_bind: false,
-                payable_amount: "0.01",
+                payable_amount: this.payableAmount,
                 selected_coupon_id: "",
                 use_point_discount: false,
             },
