@@ -1,48 +1,47 @@
 <div class="parking-checkout">
     <div class="parking-checkout_plate-number">
-        <text>京 A00000</text>
+        <text>{{ plateNumber }}</text>
         <div>
             <text>绑定车牌</text>
-            <input type="checkbox" checked="false"></input>
+            <input type="checkbox" checked="{{checkout}}"></input>
         </div>
     </div>
     <div class="parking-checkout_info">
         <div class="info_item">
             <text>车场名称</text>
-            <text>安贞门</text>
+            <text>{{ carParkName }}</text>
         </div>
         <div class="info_item">
             <text>入场时间</text>
-            <text>2021-3-4 13：00</text>
+            <text>{{ entryTime }}</text>
         </div>
         <div class="info_item">
             <text>停车时长</text>
-            <text>3小时7分钟16秒</text>
+            <text>{{ time }}</text>
         </div>
         <div class="info_item">
             <text>缴费金额</text>
-            <text>¥24.00</text>
+            <text>¥{{ totalAmount }}</text>
         </div>
     </div>
     <div class="parking-checkout_coupon">
         <div class="info_item">
-            <text>入场时间</text>
-            <text>2021-3-4 13：00</text>
+            <text>停车券</text>
+            <text>暂无可用</text>
         </div>
         <div class="info_item">
-            <text>停车时长</text>
-            <text>3小时7分钟16秒</text>
-        </div>
-        <div class="info_item">
-            <text>缴费金额</text>
-            <text>¥24.00</text>
+            <text>积分</text>
+            <div>
+                <text>{{ rulePoint }}积分抵用{{ ruleAmount }}元</text>
+                <input type="checkbox"  onclick="onChangePointState"></input>
+            </div>
         </div>
     </div>
     <div class="parking-checkout_footer">
         <text>
-            应付 ¥ 18.00
+            应付 ¥ {{ payableAmount }}
         </text>
-        <button class="footer_pay">
+        <button class="footer_pay" onchange="postCarparkOrders">
             立即支付
         </button>
     </div>

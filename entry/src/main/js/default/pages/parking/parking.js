@@ -42,10 +42,10 @@ export default {
         }
     },
     getPlateNumbers() {
-        const url = `${baseUrl}/CARPARK/front/car_numbers?id=72002`
+        const url = `${baseUrl}/CARPARK/front/car_numbers?id=${userId}`
         const params = {
             extraData: {
-                id: '72002'
+                id: userId
             },
             header: {
                 userId: userId,
@@ -65,7 +65,10 @@ export default {
     },
     async onSearch() {
         router.push({
-            uri: 'pages/parking_checkout/parking_checkout'
+            uri: 'pages/parking_checkout/parking_checkout',
+            params: {
+                plateNumber: this.plateNumber,
+            },
         })
         const url = `${baseUrl}/CARPARK/front/carpark_checkouts`
         const params = {
