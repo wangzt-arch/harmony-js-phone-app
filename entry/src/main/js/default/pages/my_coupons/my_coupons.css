@@ -25,6 +25,7 @@
 }
 
 .my-coupons-box {
+    display: flex;
     flex-direction: column;
     width: 720px;
     padding: 31px 31px 0 31px;
@@ -36,6 +37,8 @@
     height: 177px;
     margin-bottom: 31px;
     background-image: url('https://puzhehei.oss-cn-beijing.aliyuncs.com/miao/coupon_nomal_bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .coupon_left {
@@ -100,6 +103,7 @@
 
 .coupon_date {
     height: 31px;
+    width: 100%;
     font-size: 21px;
     font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;

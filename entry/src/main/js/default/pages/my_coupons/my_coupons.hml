@@ -11,15 +11,18 @@
             <div class="coupon_left">
                 <div class="coupon_price">
                     <text class="coupon_price_tip">¥</text>
-                    <text>{{$item.coupon_data.origin_value}}</text>
+                    <text>{{ $item.coupon_data.origin_value }}</text>
                 </div>
                 <text class="coupon_tip">满1000可用</text>
             </div>
             <div class="coupon_right">
                 <text class="coupon_name">{{ $item.coupon_data.name }}</text>
                 <text class="coupon_address">{{ $item.coupon_rule.consume_channel_description }}</text>
-                <text class="coupon_date">有效期: {{ item.coupon_data.period.start_time }}-{{
-                    item.coupon_data.period.end_time }}</text>
+                <div class="coupon_date">
+                    <text>有效期: {{ $item.coupon_data.period.start_time }}</text>
+                    <text>-</text>
+                    <text> {{ $item.coupon_data.period.end_time }}}}</text>
+                </div>
             </div>
         </div>
     </div>

@@ -12,7 +12,7 @@ export default {
         experience: 150,
         cardNo: '6275 9803 38918829 599',
         memberCardLevel: '',
-        servers:['停车缴费','领券中心']
+        servers: ['停车缴费', '领券中心']
     },
     showCodeCard() {
         this.$element('code-card').show()
@@ -30,7 +30,7 @@ export default {
         }
         if (idx === 1) {
             router.push({
-                uri: 'pages/my_coupons/my_coupons'
+                uri: 'pages/coupons_center/coupons_center'
             })
         }
 
@@ -114,6 +114,11 @@ export default {
     onNavigateToHome() {
         router.replace({
             uri: 'pages/home/home'
+        })
+    },
+    onNavigateToMyCoupons() {
+        router.push({
+            uri: 'pages/my_coupons/my_coupons'
         })
     }
 }

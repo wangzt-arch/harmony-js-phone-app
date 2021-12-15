@@ -26,7 +26,7 @@
                 <span>我的积分</span>
             </text>
         </div>
-        <div class="user-coupon-box">
+        <div class="user-coupon-box" onclick="onNavigateToMyCoupons">
             <text>
                 <span>{{ couponCount }} 张</span>
             </text>

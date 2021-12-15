@@ -36,8 +36,7 @@ export default {
             const resString = JSON.stringify(res)
             const result = JSON.parse(res.result)
             this.coupons=result.result
-            console.log(JSON.stringify(res.result))
-//            console.log(resString)
+            console.log(resString )
         }
         catch (err) {
             console.info(err)
