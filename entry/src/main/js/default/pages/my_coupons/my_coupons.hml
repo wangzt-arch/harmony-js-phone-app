@@ -1,7 +1,7 @@
 <div class="my-coupons">
     <div class="tab-bar-box">
         <div for="{{ tabBars }}" class="tab-bar-item">
-            <text onclick="onSelectType({{ $idx }})">
+            <text class="{{ $idx === tabIndex ? 'selected' : '' }}" onclick="onSelectType({{ $idx }})">
                 {{ $item }}
             </text>
         </div>
