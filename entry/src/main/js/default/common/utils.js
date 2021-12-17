@@ -56,9 +56,9 @@ export default function hmsHttp(url, params, method) {
     });
     return promise
 }
-const env = "qa"
+const env = "dev"
 
-export const baseUrl = 'https://miao-magic-test-restapi.co-mall.com'
+export const baseUrl = env === 'qa' ? 'https://miao-magic-test-restapi.co-mall.com' : 'https://miao-magic-dev-restapi.co-mall.com'
 
 export const userId = env === 'qa' ? '140007' : '72002'
 
