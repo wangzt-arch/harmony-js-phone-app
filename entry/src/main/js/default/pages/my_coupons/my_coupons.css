@@ -13,9 +13,12 @@
     width: 720px;
     height: 84px;
 }
-
+.tab-item-text{
+    height: 80px;
+}
 .selected {
-    color: #007046
+    color: #007046;
+    border-bottom: 1px solid #007046;
 }
 
 .tab-bar-item {
