@@ -8,9 +8,9 @@ export default {
     },
     onInit() {
         this.getSubsiteList(),
-        this.getCurrentPosition()
+        this.getCurrentlocation()
     },
-    getCurrentPosition() {
+    getCurrentlocation() {
         geolocation.getLocation({
             success: function (data) {
                 console.log('success get location data. latitude:' + data.latitude);
