@@ -1,17 +1,17 @@
-<div class="subsite-card">
+<div class="subsite-card" onclick="onSelectSubsite({{ message.id }})">
     <div class="subsite-card_name">
         <text>
-            {{message.subsite_name}} 2.64km
+            {{ message.subsite_name }} 2.64km
         </text>
     </div>
     <div class="subsite-card_position">
         <text>
-            {{message.adress}}
+            {{ message.adress }}
         </text>
     </div>
     <div class="subsite-card_content">
         <image class="subsite-card_content_left"
-               src="{{message.pic_url}}"></image>
+               src="{{ message.pic_url }}"></image>
         <div class="subsite-card_content_right">
             <div class="content-right_title">
                 <text>
@@ -20,7 +20,7 @@
             </div>
             <div class="content-right_text">
                 <text>
-                    {{message.business_time}}
+                    {{ message.business_time }}
                 </text>
             </div>
             <div class="content-right_title">
@@ -30,7 +30,7 @@
             </div>
             <div class="content-right_text">
                 <text>
-                    {{message.service_phone}}
+                    {{ message.service_phone }}
                 </text>
             </div>
         </div>
