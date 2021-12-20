@@ -116,8 +116,12 @@
     ],
     "reqPermissions": [
       {
-        "reason": "",
+        "reason": "网络",
         "name": "ohos.permission.INTERNET"
+      },
+      {
+        "reason": "位置",
+        "name": "ohos.permission.LOCATION"
       }
     ]
   }

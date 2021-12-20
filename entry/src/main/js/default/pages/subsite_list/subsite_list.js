@@ -1,12 +1,24 @@
-import hmsHttp, {baseUrl, userId, userSession, subsiteId} from '../../common/utils.js';
+import hmsHttp, {baseUrl, userId, subsiteId} from '../../common/utils.js';
+import geolocation from '@system.geolocation';
 
 export default {
     data: {
-        subsiteLists:[],
-        messageNearly:''
+        subsiteLists: [],
+        messageNearly: ''
     },
     onInit() {
-        this.getSubsiteList()
+        this.getSubsiteList(),
+        this.getCurrentPosition()
+    },
+    getCurrentPosition() {
+        geolocation.getLocation({
+            success: function (data) {
+                console.log('success get location data. latitude:' + data.latitude);
+            },
+            fail: function (data, code) {
+                console.log('fail to get location. code:' + code + ', data:' + data);
+            },
+        });
     },
     async getSubsiteList() {
         const url = `${baseUrl}/WEB-API/front/city_subsites/v2`
@@ -21,8 +33,8 @@ export default {
             const res = await  hmsHttp(url, params, "GET")
             const resString = JSON.stringify(res.result)
             const resObj = JSON.parse(res.result)
-            this.subsiteLists=resObj
-            this.messageNearly=resObj[0].subsites[0]
+            this.subsiteLists = resObj
+            this.messageNearly = resObj[0].subsites[0]
             console.log(resString)
         }
         catch (err) {

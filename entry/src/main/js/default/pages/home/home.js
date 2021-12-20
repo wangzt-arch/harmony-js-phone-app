@@ -1,5 +1,7 @@
 import router from '@system.router';
-import hmsHttp, {baseUrl, userId, userSession, subsiteId} from '../../common/utils.js';
+import hmsHttp, {baseUrl} from '../../common/utils.js';
+import dataStorage from '@ohos.data.storage'
+import featureAbility from '@ohos.ability.featureAbility'
 
 export default {
     data: {
@@ -34,6 +36,13 @@ export default {
             this.subsiteLists = result
             this.subsiteName = result[0].subsite_name
             console.log(resString)
+
+
+//            let context = featureAbility.getContext()
+//            let path = await context.getFilesDir()
+//            let storage = dataStorage.getStorageSync(path + '/mystore')
+//            storage.putSync('startup', 'auto')
+//            storage.flushSync()
         }
         catch (err) {
             console.log(err)
