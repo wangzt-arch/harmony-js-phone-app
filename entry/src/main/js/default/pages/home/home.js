@@ -38,11 +38,11 @@ export default {
             console.log(resString)
 
 
-//            let context = featureAbility.getContext()
-//            let path = await context.getFilesDir()
-//            let storage = dataStorage.getStorageSync(path + '/mystore')
-//            storage.putSync('startup', 'auto')
-//            storage.flushSync()
+            let context = featureAbility.getContext()
+            let path = await context.getFilesDir()
+            let storage = dataStorage.getStorageSync(path + '/mystore')
+            storage.putSync('subsiteId', result[0].id.toString())
+            storage.flushSync()
         }
         catch (err) {
             console.log(err)

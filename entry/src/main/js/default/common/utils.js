@@ -1,4 +1,16 @@
 import http from '@ohos.net.http';
+import dataStorage from '@ohos.data.storage'
+import featureAbility from '@ohos.ability.featureAbility'
+
+async function getSubsiteId() {
+    let context = featureAbility.getContext()
+    let path = await context.getFilesDir()
+    let storage = dataStorage.getStorageSync(path + '/mystore')
+    let promise = storage.getSync('subsiteId', 'default')
+    console.log('wzt', promise)
+    return promise
+
+}
 
 function getUnique() {
     const now = new Date();
