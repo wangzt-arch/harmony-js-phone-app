@@ -1,4 +1,4 @@
-import hmsHttp, {baseUrl, userId, userSession, subsiteId, separate_4_4_n_3} from '../../common/utils.js';
+import hmsHttp, {baseUrl, userId, userSession, separate_4_4_n_3,getSubsiteId} from '../../common/utils.js';
 import router from '@system.router';
 
 export default {
@@ -36,6 +36,7 @@ export default {
 
     },
     async onGetUserMessage() {
+        const subsiteId= await getSubsiteId()
         const url = `${baseUrl}/api/v2/profiles/mine`
         try {
             const params = {
@@ -61,6 +62,7 @@ export default {
         }
     },
     async onGetUserAssets() {
+        const subsiteId= await getSubsiteId()
         const url = `${baseUrl}/MAGIC-MEMBER/front/members/mine/assets`
         try {
             const params = {
@@ -68,8 +70,6 @@ export default {
                 header: {
                     userId: userId,
                     userSession: userSession,
-                    //                    userId: 70003,
-                    //                    userSession: "0df085d175ee4e18bbae5c1203a8f191",
                     subsiteId: subsiteId
                 }
             }
@@ -85,6 +85,7 @@ export default {
         }
     },
     async onGetCard() {
+        const subsiteId= await getSubsiteId()
         const url = `${baseUrl}/MEMBER-CENTER/front/membership_cards/mine`
         try {
             const params = {

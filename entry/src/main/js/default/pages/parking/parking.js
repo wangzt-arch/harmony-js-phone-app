@@ -1,5 +1,5 @@
 import router from '@system.router';
-import hmsHttp, {baseUrl, userId, userSession, subsiteId} from '../../common/utils.js';
+import hmsHttp, {baseUrl, userId, userSession, getSubsiteId} from '../../common/utils.js';
 
 export default {
     data: {
@@ -22,6 +22,7 @@ export default {
         this.plateNumber = this.province + e.value
     },
     async getExplains() {
+        const subsiteId = await getSubsiteId()
         const url = `${baseUrl}/CARPARK/front/carparks/subsite/${subsiteId}`
         const params = {
             extraData: {},
@@ -41,7 +42,8 @@ export default {
             console.info(err)
         }
     },
-    getPlateNumbers() {
+    async getPlateNumbers() {
+        const subsiteId = await getSubsiteId()
         const url = `${baseUrl}/CARPARK/front/car_numbers?id=${userId}`
         const params = {
             extraData: {
@@ -53,15 +55,13 @@ export default {
                 subsiteId: subsiteId
             }
         }
-
-        const res = hmsHttp(url, params, "GET")
-        res.then((value => {
-            console.info(JSON.stringify(value.result));
-            this.plateNumberBinds = JSON.parse(value.result)
-
-        })).catch(err => {
-            console.info("err", err)
-        })
+        try {
+            const res = await hmsHttp(url, params, "GET")
+            this.plateNumberBinds = JSON.parse(res.result)
+        }
+        catch (err) {
+            console.info(err)
+        }
     },
     async onSearch() {
         router.push({

@@ -1,5 +1,5 @@
 import router from '@system.router';
-import hmsHttp, {baseUrl, userId, userSession, subsiteId} from '../../common/utils.js';
+import hmsHttp, {baseUrl, userId, userSession, getSubsiteId} from '../../common/utils.js';
 
 export default {
     data: {
@@ -8,7 +8,8 @@ export default {
     onInit() {
         this.getPlateNumbers()
     },
-    getPlateNumbers() {
+    async getPlateNumbers() {
+        const subsiteId = await getSubsiteId()
         const url = `${baseUrl}/CARPARK/front/car_numbers?id=72002`
         const params = {
             extraData: {
@@ -20,17 +21,19 @@ export default {
                 subsiteId: subsiteId
             }
         }
+        try {
+            const res =await hmsHttp(url, params, "GET")
+            console.info(JSON.stringify(res.result));
+            console.info(JSON.stringify(res));
+            this.plateNumberBinds = JSON.parse(res.result)
+        }
+        catch (err) {
+            console.info(err)
+        }
 
-        const res = hmsHttp(url, params, "GET")
-        res.then((value => {
-            console.info(JSON.stringify(value.result));
-            console.info(JSON.stringify(value));
-            this.plateNumberBinds = JSON.parse(value.result)
-        })).catch(err => {
-            console.info("err", err)
-        })
     },
     async deletePlateNumberById(id) {
+        const subsiteId = await getSubsiteId()
         const url = `${baseUrl}/CARPARK/front/car_numbers/delete_carnumber/${id}`
         const params = {
             extraData: {},

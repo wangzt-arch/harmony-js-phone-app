@@ -1,5 +1,5 @@
 import router from '@system.router';
-import hmsHttp, {baseUrl, userId, userSession, subsiteId} from '../../common/utils.js';
+import hmsHttp, {baseUrl, userId, userSession,getSubsiteId} from '../../common/utils.js';
 
 export default {
     data: {
@@ -16,6 +16,7 @@ export default {
         this.plateNumber = this.province + e.value
     },
     async onAddCars() {
+        const subsiteId= await getSubsiteId()
         const url = `${baseUrl}/CARPARK/front/car_numbers`
         const params = {
             extraData: {

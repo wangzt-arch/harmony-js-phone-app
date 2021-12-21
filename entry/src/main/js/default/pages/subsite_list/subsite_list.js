@@ -1,4 +1,4 @@
-import hmsHttp, {baseUrl, userId, subsiteId} from '../../common/utils.js';
+import hmsHttp, {baseUrl, userId, getSubsiteId} from '../../common/utils.js';
 import geolocation from '@system.geolocation';
 
 export default {
@@ -21,6 +21,7 @@ export default {
         });
     },
     async getSubsiteList() {
+        const subsiteId = await getSubsiteId()
         const url = `${baseUrl}/WEB-API/front/city_subsites/v2`
         const params = {
             extraData: {},

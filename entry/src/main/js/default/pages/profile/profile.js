@@ -1,6 +1,6 @@
 import prompt from '@system.prompt';
 import router from '@system.router';
-import hmsHttp, {baseUrl, userId, userSession, subsiteId} from '../../common/utils.js';
+import hmsHttp, {baseUrl, userId, userSession, getSubsiteId} from '../../common/utils.js';
 
 export default {
     data: {
@@ -13,6 +13,7 @@ export default {
         this.onGetUserMessage()
     },
     async onGetUserMessage() {
+        const subsiteId = await getSubsiteId()
         const url = `${baseUrl}/api/v2/profiles/mine`
         try {
             const params = {
@@ -36,6 +37,7 @@ export default {
         }
     },
     async onPostBase64() {
+        const subsiteId = await getSubsiteId()
         const url = `${baseUrl}/api/pictures/base64`
         const params = {
             extraData: {
@@ -77,6 +79,7 @@ export default {
         this.currentNickname = e.value
     },
     async onConfirmChangeNickname() {
+        const subsiteId = await getSubsiteId()
         const url = `${baseUrl}/MEMBER-CENTER/front/members/mine`
         try {
             const params = {

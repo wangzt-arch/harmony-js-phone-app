@@ -1,5 +1,5 @@
 import router from '@system.router';
-import hmsHttp, {baseUrl, userId, userSession, subsiteId} from '../../common/utils.js';
+import hmsHttp, {baseUrl, userId, userSession, getSubsiteId} from '../../common/utils.js';
 
 export default {
     data: {
@@ -19,6 +19,7 @@ export default {
         console.log(this.plateNumber)
     },
     async postParkingCheckout() {
+        const subsiteId = await getSubsiteId()
         const url = `${baseUrl}/CARPARK/front/carpark_checkouts`
         const params = {
             extraData: {
@@ -50,6 +51,7 @@ export default {
         }
     },
     async postCarparkOrders() {
+        const subsiteId = await getSubsiteId()
         const url = `${baseUrl}/CARPARK/front/carpark_orders`
         const params = {
             extraData: {

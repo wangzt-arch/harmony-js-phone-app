@@ -1,4 +1,4 @@
-import hmsHttp, {baseUrl, userId, userSession, subsiteId} from '../../common/utils.js';
+import hmsHttp, {baseUrl, userId, userSession, getSubsiteId} from '../../common/utils.js';
 import prompt from '@system.prompt';
 
 export default {
@@ -54,6 +54,7 @@ export default {
         }
     },
     async getUserInfo() {
+        const subsiteId= await getSubsiteId()
         const url = `${baseUrl}/api/members/info`
         const params = {
             extraData: {},
