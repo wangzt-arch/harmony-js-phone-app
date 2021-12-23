@@ -51,7 +51,7 @@ export default {
 
             const res = await  hmsHttp(url, params, "POST")
             const resString = JSON.stringify(res)
-            const resObj = JSON.parse(resString)
+//            const resObj = JSON.parse(resString)
             console.log(resString)
         }
         catch (err) {

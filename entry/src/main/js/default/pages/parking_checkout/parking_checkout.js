@@ -4,15 +4,15 @@ import hmsHttp, {baseUrl, userId, userSession, getSubsiteId} from '../../common/
 export default {
     data: {
         checkout: false,
-        pointCheckout:false,
+        pointCheckout: false,
         plateNumber: 'default',
         carParkName: '',
         entryTime: '',
         totalAmount: '',
         payableAmount: "",
         time: "",
-        rulePoint:"",
-        ruleAmount:''
+        rulePoint: "",
+        ruleAmount: ''
     },
     onInit() {
         this.postParkingCheckout()
@@ -36,9 +36,9 @@ export default {
             const resString = JSON.stringify(res)
             const result = JSON.parse(res.result)
             const {carpark_name,entry_time,parking_time_sec,total_amount,payable_amount,point_discount} = result
-            const{rule_amount,rule_point}=point_discount
-            this.ruleAmount=rule_amount
-            this.rulePoint=rule_point
+            const {rule_amount,rule_point} = point_discount
+            this.ruleAmount = rule_amount
+            this.rulePoint = rule_point
             this.carParkName = carpark_name
             this.entryTime = entry_time
             this.totalAmount = total_amount
@@ -70,7 +70,8 @@ export default {
         try {
             const res = await  hmsHttp(url, params, "POST")
             const resString = JSON.stringify(res)
-            const resObj = JSON.parse(res)
+//            const resObj = JSON.parse(res)
+            console.log("订单信息")
             console.log(resString)
         }
         catch (err) {
@@ -104,8 +105,8 @@ export default {
         }
         return result;
     },
-    onChangePointState(){
+    onChangePointState() {
         console.log(this.pointCheckout)
-        this.pointCheckout=!this.pointCheckout
+        this.pointCheckout = !this.pointCheckout
     }
 }

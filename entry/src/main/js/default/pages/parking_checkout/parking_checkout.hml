@@ -41,7 +41,7 @@
         <text>
             应付 ¥ {{ payableAmount }}
         </text>
-        <button class="footer_pay" onchange="postCarparkOrders">
+        <button class="footer_pay" onclick="postCarparkOrders">
             立即支付
         </button>
     </div>
